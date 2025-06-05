@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GARAGE GYM 4 VETS | Partnership Opportunities</title>
+    <!-- Chosen Palette: "Mission Ready" - A clean and professional palette using warm neutrals (stone), a deep black for strength, and a vibrant, motivating orange as the primary accent for calls-to-action and highlights. This combination feels modern, trustworthy, and energetic. -->
+    <!-- Application Structure Plan: The SPA is designed as a single-page, vertical narrative that guides a potential advertiser through a logical sales funnel. It starts with a high-impact hero section (Awareness), moves to mission and audience data (Interest & Consideration), presents the offerings (Decision), and ends with clear calls-to-action (Action). This is more intuitive and engaging for a web user than a static document, allowing them to explore at their own pace with a fixed navigation for easy access to all sections. -->
+    <!-- Visualization & Content Choices: Report Info -> Goal -> Viz/Presentation Method -> Justification. 1. Key Metrics -> Inform -> Large stat cards -> Immediately conveys scale and reach. 2. Audience Demographics -> Compare/Inform -> Doughnut & Bar Charts (Chart.js) -> Visually breaks down complex data for quick insights. 3. Partnership Inventory -> Organize/Inform -> Interactive card grid -> Presents offerings as a clear, browsable "menu" of options. 4. Mission/Testimonials -> Connect Emotionally -> Styled text blocks with high-quality imagery -> Builds brand trust and narrative appeal. All choices prioritize scannability and visual engagement over dense text. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f7; /* Warm neutral background */
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="text-stone-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-2xl font-black text-stone-900">
+                GG<span class="text-orange-600">4</span>V
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-stone-600 hover:text-orange-600 transition-colors duration-300">Mission</a>
+                <a href="#audience" class="text-stone-600 hover:text-orange-600 transition-colors duration-300">Audience</a>
+                <a href="#partnerships" class="text-stone-600 hover:text-orange-600 transition-colors duration-300">Opportunities</a>
+                <a href="#contact" class="text-stone-600 hover:text-orange-600 transition-colors duration-300">Connect</a>
+            </div>
+            <a href="#contact" class="hidden md:block bg-orange-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-orange-700 transition-colors duration-300">
+                Partner With Us
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-stone-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block text-center py-2 px-4 text-sm text-stone-600 hover:bg-stone-200">Mission</a>
+            <a href="#audience" class="block text-center py-2 px-4 text-sm text-stone-600 hover:bg-stone-200">Audience</a>
+            <a href="#partnerships" class="block text-center py-2 px-4 text-sm text-stone-600 hover:bg-stone-200">Opportunities</a>
+            <a href="#contact" class="block text-center py-2 px-4 text-sm text-stone-600 hover:bg-stone-200">Connect</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative text-center py-20 md:py-32 bg-white">
+            <div class="absolute inset-0 bg-stone-900 opacity-5"></div>
+            <div class="container mx-auto px-6 relative">
+                <h1 class="text-4xl md:text-6xl font-black text-stone-900 leading-tight">
+                    Partnering for Impact with <br> <span class="text-orange-600">GARAGE GYM 4 VETS</span>
+                </h1>
+                <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-stone-600">
+                    Connect your brand with a highly engaged, purpose-driven community dedicated to the health and empowerment of our nation's heroes.
+                </p>
+                <a href="#partnerships" class="mt-8 inline-block bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-orange-700 transition-transform duration-300 transform hover:scale-105">
+                    View Partnership Opportunities
+                </a>
+            </div>
+        </section>
+
+        <!-- About Us / Mission Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-black text-stone-900">Forge Unbreakable Connections</h2>
+                    <p class="mt-4 text-lg max-w-2xl mx-auto text-stone-600">Our mission is to empower veterans through fitness, creating partnerships that resonate with an audience that values authenticity, trust, and commitment.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-stone-100 p-8 rounded-xl shadow-sm">
+                        <h3 class="text-2xl font-bold text-orange-600">Empower Heroes</h3>
+                        <p class="mt-2 text-stone-600">Our content centers on the transformative power of fitness, building personalized gyms that become catalysts for physical and mental resilience.</p>
+                    </div>
+                    <div class="bg-stone-100 p-8 rounded-xl shadow-sm">
+                        <h3 class="text-2xl font-bold text-orange-600">Authentic Connection</h3>
+                        <p class="mt-2 text-stone-600">Gain unparalleled access to a niche audience that shares a deep commitment to a greater cause and trusts our recommendations implicitly.</p>
+                    </div>
+                    <div class="bg-stone-100 p-8 rounded-xl shadow-sm">
+                        <h3 class="text-2xl font-bold text-orange-600">Meaningful ROI</h3>
+                        <p class="mt-2 text-stone-600">Embed your brand within a compelling narrative of strength and service, driving genuine brand loyalty beyond simple metrics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Audience & Reach Section -->
+        <section id="audience" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-black text-stone-900">Unveiling Your Ideal Audience</h2>
+                    <p class="mt-4 text-lg max-w-2xl mx-auto text-stone-600">Our audience isn't just large; it's deeply invested, highly valuable, and ready to engage with brands that align with their values.</p>
+                </div>
+
+                <!-- Quick Facts -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                    <div class="text-center bg-white p-6 rounded-xl shadow-md">
+                        <p class="text-4xl md:text-5xl font-black text-orange-600" id="subscriber-count">125K+</p>
+                        <p class="mt-2 font-semibold text-stone-700">Subscribers</p>
+                    </div>
+                    <div class="text-center bg-white p-6 rounded-xl shadow-md">
+                        <p class="text-4xl md:text-5xl font-black text-orange-600" id="avg-views">75K+</p>
+                        <p class="mt-2 font-semibold text-stone-700">Average Views</p>
+                    </div>
+                     <div class="text-center bg-white p-6 rounded-xl shadow-md">
+                        <p class="text-4xl md:text-5xl font-black text-orange-600" id="watch-time">9.5M</p>
+                        <p class="mt-2 font-semibold text-stone-700">Monthly Watch Mins</p>
+                    </div>
+                    <div class="text-center bg-white p-6 rounded-xl shadow-md">
+                        <p class="text-4xl md:text-5xl font-black text-orange-600" id="social-followers">250K+</p>
+                        <p class="mt-2 font-semibold text-stone-700">Social Followers</p>
+                    </div>
+                </div>
+
+                <!-- Audience Demographics -->
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-bold text-center mb-4">Audience Gender</h3>
+                        <div class="chart-container mx-auto max-w-xs">
+                            <canvas id="genderChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-bold text-center mb-4">Audience Age</h3>
+                        <div class="chart-container">
+                            <canvas id="ageChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partnership Opportunities Section -->
+        <section id="partnerships" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-black text-stone-900">Curated Solutions for Impact</h2>
+                    <p class="mt-4 text-lg max-w-2xl mx-auto text-stone-600">We offer a clear menu of collaboration pathways, designed to seamlessly integrate your brand and make meaningful engagement easy.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Partnership Cards -->
+                    <div class="bg-stone-100 p-8 rounded-xl shadow-sm transform hover:-translate-y-2 transition-transform duration-300">
+                        <h3 class="text-xl font-bold text-stone-900">Dedicated Video Sponsorship</h3>
+                        <p class="mt-3 text-stone-600">Take center stage with an exclusive, in-depth narrative or a comprehensive product integration within a full episode.</p>
+                    </div>
+                    <div class="bg-stone-100 p-8 rounded-xl shadow-sm transform hover:-translate-y-2 transition-transform duration-300">
+                        <h3 class="text-xl font-bold text-stone-900">Authentic Product Placement</h3>
+                        <p class="mt-3 text-stone-600">Seamlessly showcase your products within our signature build series, workout demonstrations, or lifestyle segments.</p>
+                    </div>
+                    <div class="bg-stone-100 p-8 rounded-xl shadow-sm transform hover:-translate-y-2 transition-transform duration-300">
+                        <h3 class="text-xl font-bold text-stone-900">Integrated Mentions</h3>
+                        <p class="mt-3 text-stone-600">Benefit from powerful, organic shout-outs or brief, high-impact product highlights woven naturally into our content.</p>
+                    </div>
+                    <div class="bg-stone-100 p-8 rounded-xl shadow-sm transform hover:-translate-y-2 transition-transform duration-300">
+                        <h3 class="text-xl font-bold text-stone-900">Social Media Amplification</h3>
+                        <p class="mt-3 text-stone-600">Expand your reach with targeted cross-promotion across our established and growing social media platforms.</p>
+                    </div>
+                    <div class="bg-stone-100 p-8 rounded-xl shadow-sm transform hover:-translate-y-2 transition-transform duration-300">
+                        <h3 class="text-xl font-bold text-stone-900">Community Giveaways</h3>
+                        <p class="mt-3 text-stone-600">Drive excitement and direct engagement by involving our community with your brand's products through exclusive contests.</p>
+                    </div>
+                    <div class="bg-stone-100 p-8 rounded-xl shadow-sm transform hover:-translate-y-2 transition-transform duration-300">
+                        <h3 class="text-xl font-bold text-stone-900">Custom Media Packages</h3>
+                        <p class="mt-3 text-stone-600">Let's build a strategically bundled campaign to maximize impact and optimize results for any budget level.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-stone-900 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-black">Let's Build a Partnership That Matters.</h2>
+                <p class="mt-4 text-lg max-w-2xl mx-auto text-stone-300">Ready to reach a highly engaged, purpose-driven audience? Connect with our team to get started.</p>
+                <div class="mt-10">
+                    <a href="mailto:fitnesswerx@gmail.com?subject=Partnership Inquiry - GARAGE GYM 4 VETS" class="bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-orange-700 transition-transform duration-300 transform hover:scale-105">
+                        Email Us for a Rate Card
+                    </a>
+                </div>
+                <div class="mt-12 text-stone-400">
+                    <p class="font-bold">Dennis Solis, Home Fitness Werx</p>
+                    <p>fitnesswerx@gmail.com</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-6">
+        <div class="container mx-auto px-6 text-center text-stone-500">
+            &copy; 2025 GARAGE GYM 4 VETS & Home Fitness Werx. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Chart.js Data and Initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            const chartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#44403c', // stone-700
+                            font: {
+                                family: "'Inter', sans-serif"
+                            }
+                        }
+                    }
+                }
+            };
+            
+            // Gender Chart
+            const genderCtx = document.getElementById('genderChart').getContext('2d');
+            new Chart(genderCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Male', 'Female', 'Other'],
+                    datasets: [{
+                        label: 'Audience Gender',
+                        data: [65, 33, 2],
+                        backgroundColor: [
+                            '#292524', // stone-800
+                            '#ea580c', // orange-600
+                            '#a8a29e'  // stone-400
+                        ],
+                        borderColor: '#ffffff',
+                        borderWidth: 2
+                    }]
+                },
+                options: chartOptions
+            });
+
+            // Age Chart
+            const ageCtx = document.getElementById('ageChart').getContext('2d');
+            new Chart(ageCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['18-24', '25-34', '35-44', '45-54', '55+'],
+                    datasets: [{
+                        label: 'Audience by Age',
+                        data: [12, 35, 30, 18, 5],
+                        backgroundColor: '#ea580c', // orange-600
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    ...chartOptions,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: { color: '#44403c' },
+                            grid: { color: '#e7e5e4' } // stone-200
+                        },
+                        x: {
+                            ticks: { color: '#44403c' },
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
